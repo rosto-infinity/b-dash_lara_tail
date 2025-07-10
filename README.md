@@ -1,61 +1,115 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# b-dash_lara_tail
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Ce projet est une application web basée sur [Laravel](https://laravel.com/), utilisant [Vite](https://vitejs.dev/) pour le bundling front-end, [Tailwind CSS](https://tailwindcss.com/) pour le style, et [Alpine.js](https://alpinejs.dev/) pour l'interactivité.
 
-## About Laravel
+## Prérequis
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- PHP >= 8.1
+- Composer
+- Node.js >= 18
+- npm
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Installation
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. Clonez le dépôt :
+   ```sh
+   git clone <url-du-repo>
+   cd b-dash_lara_tail
+   ```
 
-## Learning Laravel
+2. Installez les dépendances PHP :
+   ```sh
+   composer install
+   ```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+3. Installez les dépendances JavaScript :
+   ```sh
+   npm install
+   ```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+4. Copiez le fichier d'environnement :
+   ```sh
+   cp .env.example .env
+   ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+5. Générez la clé d'application :
+   ```sh
+   php artisan key:generate
+   ```
 
-## Laravel Sponsors
+6. Lancez les migrations :
+   ```sh
+   php artisan migrate
+   ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Lancement du projet
 
-### Premium Partners
+- Pour lancer le serveur de développement Laravel :
+  ```sh
+  php artisan serve
+  ```
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- Pour lancer le build front-end en mode développement :
+  ```sh
+  npm run dev
+  ```
 
-## Contributing
+- Pour générer le build de production :
+  ```sh
+  npm run build
+  ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Stack technique
 
-## Code of Conduct
+- **Backend** : Laravel 12
+- **Frontend** : Vite, Tailwind CSS v4, Alpine.js
+- **Autres dépendances** : FullCalendar, ApexCharts, Chart.js, Dropzone, Flatpickr, Swiper, etc.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Packages JavaScript requis pour le dashboard
 
-## Security Vulnerabilities
+- [`@fullcalendar/core`](https://www.npmjs.com/package/@fullcalendar/core) : Gestion de calendrier
+- [`@fullcalendar/daygrid`](https://www.npmjs.com/package/@fullcalendar/daygrid) : Vue grille du calendrier
+- [`@fullcalendar/interaction`](https://www.npmjs.com/package/@fullcalendar/interaction) : Interactions utilisateur
+- [`@fullcalendar/list`](https://www.npmjs.com/package/@fullcalendar/list) : Vue liste du calendrier
+- [`@fullcalendar/timegrid`](https://www.npmjs.com/package/@fullcalendar/timegrid) : Vue agenda
+- [`apexcharts`](https://www.npmjs.com/package/apexcharts) : Graphiques interactifs
+- [`chart.js`](https://www.npmjs.com/package/chart.js) : Graphiques statistiques
+- [`dropzone`](https://www.npmjs.com/package/dropzone) : Drag & drop de fichiers
+- [`flatpickr`](https://www.npmjs.com/package/flatpickr) : Sélecteur de date
+- [`jsvectormap`](https://www.npmjs.com/package/jsvectormap) : Cartes interactives
+- [`swiper`](https://www.npmjs.com/package/swiper) : Carrousels
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Packages JavaScript requis pour la gestion de connexion
 
-## License
+- [`alpinejs`](https://www.npmjs.com/package/alpinejs) et [`@alpinejs/persist`](https://www.npmjs.com/package/@alpinejs/persist) : Interactivité et persistance côté client
+- [`axios`](https://www.npmjs.com/package/axios) : Requêtes HTTP (API, authentification)
+- [`@tailwindcss/forms`](https://www.npmjs.com/package/@tailwindcss/forms) : Styles pour les formulaires
+- [`@tailwindcss/typography`](https://www.npmjs.com/package/@tailwindcss/typography) : Styles typographiques
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Dépendances de build et outils
+
+- [`vite`](https://www.npmjs.com/package/vite), [`@vitejs/plugin-vue`](https://www.npmjs.com/package/@vitejs/plugin-vue), [`laravel-vite-plugin`](https://www.npmjs.com/package/laravel-vite-plugin)
+- [`tailwindcss`](https://www.npmjs.com/package/tailwindcss), [`autoprefixer`](https://www.npmjs.com/package/autoprefixer), [`postcss`](https://www.npmjs.com/package/postcss)
+- [`prettier`](https://www.npmjs.com/package/prettier), [`prettier-plugin-tailwindcss`](https://www.npmjs.com/package/prettier-plugin-tailwindcss)
+- [`concurrently`](https://www.npmjs.com/package/concurrently) : Exécution parallèle de scripts
+
+## Structure du projet
+
+- `app/` : Code backend Laravel (contrôleurs, modèles, etc.)
+- `resources/views/` : Vues Blade
+- `resources/css/` : Fichiers CSS (incluant Tailwind)
+- `resources/js/` : Fichiers JavaScript (Alpine.js, etc.)
+- `routes/` : Fichiers de routes Laravel
+- `public/` : Fichiers accessibles publiquement
+- `package.json` : Dépendances JS et scripts npm
+- `composer.json` : Dépendances PHP
+
+## Scripts utiles
+
+- `npm run dev` : Démarre Vite en mode développement
+- `npm run build` : Génère les assets pour la production
+
+## Licence
+
+Ce projet est sous licence MIT.
+## SWaffo lele Rostand
