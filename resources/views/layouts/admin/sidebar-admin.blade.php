@@ -8,15 +8,8 @@
     class="flex items-center gap-2 pt-8 sidebar-header pb-7"
   >
     <a href="{{url('/admin')}}">
-      <span class="logo flex items-center justify-center" :class="sidebarToggle ? 'hidden' : ''">
-       
-        <img
-          class="hidden dark:block"
-          src="./images/logo/logo-dark.svg"
-          alt="Logo"
-        />
-      </span>
-      <span class="text-3xl ml-1">LaraDashTail</span>
+    
+      <span class="text-2xl ml-1">LDashT</span>
 
       <img
         class="logo-icon"
