@@ -1,3 +1,5 @@
+{{-- resources/views/pages/dashboard-app.blade.php --}}
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -16,7 +18,7 @@
               'resources/css/app.css',
               'resources/css/style.css',
                 'resources/js/app.js',
-                 'resources/js/index.js',
+                'resources/js/index.js',
                ])
 
         @endif
@@ -29,13 +31,14 @@
     :class="{'dark bg-gray-900': darkMode === true}"
   >
     <!-- ===== Preloader Start ===== -->
-    <include src="./partials/preloader.html"></include>
+      {{-- @include('pages.partials.preloader') --}}
+
     <!-- ===== Preloader End ===== -->
 
     <!-- ===== Page Wrapper Start ===== -->
     <div class="flex h-screen overflow-hidden">
       <!-- ===== Sidebar Start ===== -->
-      <include src="./partials/sidebar.html"></include>
+      @include('layouts.admin.sidebar-admin')
       <!-- ===== Sidebar End ===== -->
 
       <!-- ===== Content Area Start ===== -->
@@ -43,53 +46,25 @@
         class="relative flex flex-col flex-1 overflow-x-hidden overflow-y-auto"
       >
         <!-- Small Device Overlay Start -->
-        <include src="./partials/overlay.html" />
+        {{-- <include src="./partials/overlay.html" /> --}}
+      {{-- @include('pages.partials.overlay') --}}
+
         <!-- Small Device Overlay End -->
 
         <!-- ===== Header Start ===== -->
-        <include src="./partials/header.html" />
+         @include('layouts.admin.header-admin')
         <!-- ===== Header End ===== -->
 
+       
         <!-- ===== Main Content Start ===== -->
-        <main>
-          <div class="p-4 mx-auto max-w-(--breakpoint-2xl) md:p-6">
-            <div class="grid grid-cols-12 gap-4 md:gap-6">
-              <div class="col-span-12 space-y-6 xl:col-span-7">
-                <!-- Metric Group One -->
-                <include src="./partials/metric-group/metric-group-01.html" />
-                <!-- Metric Group One -->
-
-                <!-- ====== Chart One Start -->
-                <include src="./partials/chart/chart-01.html" />
-                <!-- ====== Chart One End -->
-              </div>
-              <div class="col-span-12 xl:col-span-5">
-                <!-- ====== Chart Two Start -->
-                <include src="./partials/chart/chart-02.html" />
-                <!-- ====== Chart Two End -->
-              </div>
-
-              <div class="col-span-12">
-                <!-- ====== Chart Three Start -->
-                <include src="./partials/chart/chart-03.html" />
-                <!-- ====== Chart Three End -->
-              </div>
-
-              <div class="col-span-12 xl:col-span-5">
-                <!-- ====== Map One Start -->
-                <include src="./partials/map-01.html" />
-                <!-- ====== Map One End -->
-              </div>
-
-              <div class="col-span-12 xl:col-span-7">
-                <!-- ====== Table One Start -->
-                <include src="./partials/table/table-01.html" />
-                <!-- ====== Table One End -->
-              </div>
-            </div>
-          </div>
-        </main>
+      <main>
+         <div class="p-4 mx-auto max-w-(--breakpoint-2xl) md:p-6">      
+           @yield('content')
+         </div>
+       </main>
         <!-- ===== Main Content End ===== -->
+
+
       </div>
       <!-- ===== Content Area End ===== -->
     </div>

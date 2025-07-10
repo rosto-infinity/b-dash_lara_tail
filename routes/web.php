@@ -9,6 +9,9 @@ Route::get('/', function () {
 Route::get('/admin', function () {
     return view('pages.dashboard-app');
 });
+Route::get('/admin/form-elements', function () {
+    return view('pages.admin.form-elements');
+})->name('admin.form-elements');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

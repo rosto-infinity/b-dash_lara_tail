@@ -67,7 +67,7 @@
       </button>
       <!-- Hamburger Toggle BTN -->
 
-      <a href="index.html" class="lg:hidden">
+      <a href="{{url('/admin')}}" class="lg:hidden">
         <img class="dark:hidden" src="./images/logo/logo.svg" alt="Logo" />
         <img
           class="hidden dark:block"
@@ -345,7 +345,7 @@
                     class="relative z-1 block h-10 w-full max-w-10 rounded-full"
                   >
                     <img
-                      src="./images/user/user-04.jpg"
+                      src="{{ asset('images/user/profil.png') }}"
                       alt="User"
                       class="overflow-hidden rounded-full"
                     />
@@ -613,10 +613,10 @@
           @click.prevent="dropdownOpen = ! dropdownOpen"
         >
           <span class="mr-3 h-11 w-11 overflow-hidden rounded-full">
-            <img src="./images/user/owner.jpg" alt="User" />
+            <img src="{{ asset('images/user/profil.png') }}" alt="User" />
           </span>
 
-          <span class="text-theme-sm mr-1 block font-medium"> Musharof </span>
+          <span class="text-theme-sm mr-1 block font-medium"> Waffolelerostand </span>
 
           <svg
             :class="dropdownOpen && 'rotate-180'"
