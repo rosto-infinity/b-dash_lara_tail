@@ -112,4 +112,4 @@ Ce projet est une application web basée sur [Laravel](https://laravel.com/), ut
 ## Licence
 
 Ce projet est sous licence MIT.
-## SWaffo lele Rostand
+## Waffo lele Rostand
