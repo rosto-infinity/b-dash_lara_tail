@@ -9,7 +9,7 @@
   >
     <a href="{{url('/admin')}}">
     
-      <span class="text-2xl ml-1">LDashT</span>
+      <span class="text-2xl ml-1 dark:text-gray-200">LDT</span>
 
       <img
         class="logo-icon"
@@ -224,6 +224,958 @@
           </svg>
         </h3>
 
+          <ul x-data="{ selected: '' }" class="flex flex-col gap-4 mb-6">
+            <!-- Menu Item Authentication -->
+            <li>
+              <a
+                href="#"
+                @click.prevent="selected = (selected === 'Authentication' ? '' : 'Authentication')"
+                class="menu-item group"
+                :class="(selected === 'Authentication') ? 'menu-item-active' : 'menu-item-inactive'"
+              >
+                <!-- Icône SVG (Clé) -->
+                <svg
+                  :class="(selected === 'Authentication') ? 'menu-item-icon-active' : 'menu-item-icon-inactive'"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2C8.13401 2 5 5.13401 5 9V12C5 12.5523 5.44772 13 6 13H7V15C7 16.1046 7.89543 17 9 17H15C16.1046 17 17 16.1046 17 15V13H18C18.5523 13 19 12.5523 19 12V9C19 5.13401 15.866 2 12 2ZM12 4C14.7614 4 17 6.23858 17 9V12H15V15H9V12H7V9C7 6.23858 9.23858 4 12 4ZM12 6C10.3431 6 9 7.34315 9 9V11H15V9C15 7.34315 13.6569 6 12 6ZM12 8C12.5523 8 13 8.44772 13 9C13 9.55228 12.5523 10 12 10C11.4477 10 11 9.55228 11 9C11 8.44772 11.4477 8 12 8Z"
+                    fill="currentColor"
+                  />
+                </svg>
+
+                <!-- Texte du Menu -->
+                <span class="menu-item-text">Authentication</span>
+
+                <!-- Flèche Dynamique -->
+                <svg
+                  class="menu-item-arrow absolute right-2.5 top-1/2 -translate-y-1/2 stroke-current"
+                  :class="[(selected === 'Authentication') ? 'menu-item-arrow-active' : 'menu-item-arrow-inactive']"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.79175 7.39584L10.0001 12.6042L15.2084 7.39585"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+
+              <!-- Dropdown Menu (Masqué par Défaut) -->
+              <div :class="(selected === 'Authentication') ? 'block' : 'hidden'">
+                <ul class="flex flex-col gap-1 mt-2 menu-dropdown pl-9">
+                  <li>
+                    <a href="signin.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign In
+                    </a>
+                  </li>
+                  <li>
+                    <a href="signup.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign Up
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul x-data="{ selected: '' }" class="flex flex-col gap-4 mb-6">
+            <!-- Menu Item Authentication -->
+            <li>
+              <a
+                href="#"
+                @click.prevent="selected = (selected === 'Authentication' ? '' : 'Authentication')"
+                class="menu-item group"
+                :class="(selected === 'Authentication') ? 'menu-item-active' : 'menu-item-inactive'"
+              >
+                <!-- Icône SVG (Clé) -->
+                <svg
+                  :class="(selected === 'Authentication') ? 'menu-item-icon-active' : 'menu-item-icon-inactive'"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2C8.13401 2 5 5.13401 5 9V12C5 12.5523 5.44772 13 6 13H7V15C7 16.1046 7.89543 17 9 17H15C16.1046 17 17 16.1046 17 15V13H18C18.5523 13 19 12.5523 19 12V9C19 5.13401 15.866 2 12 2ZM12 4C14.7614 4 17 6.23858 17 9V12H15V15H9V12H7V9C7 6.23858 9.23858 4 12 4ZM12 6C10.3431 6 9 7.34315 9 9V11H15V9C15 7.34315 13.6569 6 12 6ZM12 8C12.5523 8 13 8.44772 13 9C13 9.55228 12.5523 10 12 10C11.4477 10 11 9.55228 11 9C11 8.44772 11.4477 8 12 8Z"
+                    fill="currentColor"
+                  />
+                </svg>
+
+                <!-- Texte du Menu -->
+                <span class="menu-item-text">Authentication</span>
+
+                <!-- Flèche Dynamique -->
+                <svg
+                  class="menu-item-arrow absolute right-2.5 top-1/2 -translate-y-1/2 stroke-current"
+                  :class="[(selected === 'Authentication') ? 'menu-item-arrow-active' : 'menu-item-arrow-inactive']"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.79175 7.39584L10.0001 12.6042L15.2084 7.39585"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+
+              <!-- Dropdown Menu (Masqué par Défaut) -->
+              <div :class="(selected === 'Authentication') ? 'block' : 'hidden'">
+                <ul class="flex flex-col gap-1 mt-2 menu-dropdown pl-9">
+                  <li>
+                    <a href="signin.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign In
+                    </a>
+                  </li>
+                  <li>
+                    <a href="signup.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign Up
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul x-data="{ selected: '' }" class="flex flex-col gap-4 mb-6">
+            <!-- Menu Item Authentication -->
+            <li>
+              <a
+                href="#"
+                @click.prevent="selected = (selected === 'Authentication' ? '' : 'Authentication')"
+                class="menu-item group"
+                :class="(selected === 'Authentication') ? 'menu-item-active' : 'menu-item-inactive'"
+              >
+                <!-- Icône SVG (Clé) -->
+                <svg
+                  :class="(selected === 'Authentication') ? 'menu-item-icon-active' : 'menu-item-icon-inactive'"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2C8.13401 2 5 5.13401 5 9V12C5 12.5523 5.44772 13 6 13H7V15C7 16.1046 7.89543 17 9 17H15C16.1046 17 17 16.1046 17 15V13H18C18.5523 13 19 12.5523 19 12V9C19 5.13401 15.866 2 12 2ZM12 4C14.7614 4 17 6.23858 17 9V12H15V15H9V12H7V9C7 6.23858 9.23858 4 12 4ZM12 6C10.3431 6 9 7.34315 9 9V11H15V9C15 7.34315 13.6569 6 12 6ZM12 8C12.5523 8 13 8.44772 13 9C13 9.55228 12.5523 10 12 10C11.4477 10 11 9.55228 11 9C11 8.44772 11.4477 8 12 8Z"
+                    fill="currentColor"
+                  />
+                </svg>
+
+                <!-- Texte du Menu -->
+                <span class="menu-item-text">Authentication</span>
+
+                <!-- Flèche Dynamique -->
+                <svg
+                  class="menu-item-arrow absolute right-2.5 top-1/2 -translate-y-1/2 stroke-current"
+                  :class="[(selected === 'Authentication') ? 'menu-item-arrow-active' : 'menu-item-arrow-inactive']"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.79175 7.39584L10.0001 12.6042L15.2084 7.39585"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+
+              <!-- Dropdown Menu (Masqué par Défaut) -->
+              <div :class="(selected === 'Authentication') ? 'block' : 'hidden'">
+                <ul class="flex flex-col gap-1 mt-2 menu-dropdown pl-9">
+                  <li>
+                    <a href="signin.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign In
+                    </a>
+                  </li>
+                  <li>
+                    <a href="signup.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign Up
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul x-data="{ selected: '' }" class="flex flex-col gap-4 mb-6">
+            <!-- Menu Item Authentication -->
+            <li>
+              <a
+                href="#"
+                @click.prevent="selected = (selected === 'Authentication' ? '' : 'Authentication')"
+                class="menu-item group"
+                :class="(selected === 'Authentication') ? 'menu-item-active' : 'menu-item-inactive'"
+              >
+                <!-- Icône SVG (Clé) -->
+                <svg
+                  :class="(selected === 'Authentication') ? 'menu-item-icon-active' : 'menu-item-icon-inactive'"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2C8.13401 2 5 5.13401 5 9V12C5 12.5523 5.44772 13 6 13H7V15C7 16.1046 7.89543 17 9 17H15C16.1046 17 17 16.1046 17 15V13H18C18.5523 13 19 12.5523 19 12V9C19 5.13401 15.866 2 12 2ZM12 4C14.7614 4 17 6.23858 17 9V12H15V15H9V12H7V9C7 6.23858 9.23858 4 12 4ZM12 6C10.3431 6 9 7.34315 9 9V11H15V9C15 7.34315 13.6569 6 12 6ZM12 8C12.5523 8 13 8.44772 13 9C13 9.55228 12.5523 10 12 10C11.4477 10 11 9.55228 11 9C11 8.44772 11.4477 8 12 8Z"
+                    fill="currentColor"
+                  />
+                </svg>
+
+                <!-- Texte du Menu -->
+                <span class="menu-item-text">Authentication</span>
+
+                <!-- Flèche Dynamique -->
+                <svg
+                  class="menu-item-arrow absolute right-2.5 top-1/2 -translate-y-1/2 stroke-current"
+                  :class="[(selected === 'Authentication') ? 'menu-item-arrow-active' : 'menu-item-arrow-inactive']"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.79175 7.39584L10.0001 12.6042L15.2084 7.39585"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+
+              <!-- Dropdown Menu (Masqué par Défaut) -->
+              <div :class="(selected === 'Authentication') ? 'block' : 'hidden'">
+                <ul class="flex flex-col gap-1 mt-2 menu-dropdown pl-9">
+                  <li>
+                    <a href="signin.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign In
+                    </a>
+                  </li>
+                  <li>
+                    <a href="signup.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign Up
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul x-data="{ selected: '' }" class="flex flex-col gap-4 mb-6">
+            <!-- Menu Item Authentication -->
+            <li>
+              <a
+                href="#"
+                @click.prevent="selected = (selected === 'Authentication' ? '' : 'Authentication')"
+                class="menu-item group"
+                :class="(selected === 'Authentication') ? 'menu-item-active' : 'menu-item-inactive'"
+              >
+                <!-- Icône SVG (Clé) -->
+                <svg
+                  :class="(selected === 'Authentication') ? 'menu-item-icon-active' : 'menu-item-icon-inactive'"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2C8.13401 2 5 5.13401 5 9V12C5 12.5523 5.44772 13 6 13H7V15C7 16.1046 7.89543 17 9 17H15C16.1046 17 17 16.1046 17 15V13H18C18.5523 13 19 12.5523 19 12V9C19 5.13401 15.866 2 12 2ZM12 4C14.7614 4 17 6.23858 17 9V12H15V15H9V12H7V9C7 6.23858 9.23858 4 12 4ZM12 6C10.3431 6 9 7.34315 9 9V11H15V9C15 7.34315 13.6569 6 12 6ZM12 8C12.5523 8 13 8.44772 13 9C13 9.55228 12.5523 10 12 10C11.4477 10 11 9.55228 11 9C11 8.44772 11.4477 8 12 8Z"
+                    fill="currentColor"
+                  />
+                </svg>
+
+                <!-- Texte du Menu -->
+                <span class="menu-item-text">Authentication</span>
+
+                <!-- Flèche Dynamique -->
+                <svg
+                  class="menu-item-arrow absolute right-2.5 top-1/2 -translate-y-1/2 stroke-current"
+                  :class="[(selected === 'Authentication') ? 'menu-item-arrow-active' : 'menu-item-arrow-inactive']"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.79175 7.39584L10.0001 12.6042L15.2084 7.39585"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+
+              <!-- Dropdown Menu (Masqué par Défaut) -->
+              <div :class="(selected === 'Authentication') ? 'block' : 'hidden'">
+                <ul class="flex flex-col gap-1 mt-2 menu-dropdown pl-9">
+                  <li>
+                    <a href="signin.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign In
+                    </a>
+                  </li>
+                  <li>
+                    <a href="signup.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign Up
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul x-data="{ selected: '' }" class="flex flex-col gap-4 mb-6">
+            <!-- Menu Item Authentication -->
+            <li>
+              <a
+                href="#"
+                @click.prevent="selected = (selected === 'Authentication' ? '' : 'Authentication')"
+                class="menu-item group"
+                :class="(selected === 'Authentication') ? 'menu-item-active' : 'menu-item-inactive'"
+              >
+                <!-- Icône SVG (Clé) -->
+                <svg
+                  :class="(selected === 'Authentication') ? 'menu-item-icon-active' : 'menu-item-icon-inactive'"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2C8.13401 2 5 5.13401 5 9V12C5 12.5523 5.44772 13 6 13H7V15C7 16.1046 7.89543 17 9 17H15C16.1046 17 17 16.1046 17 15V13H18C18.5523 13 19 12.5523 19 12V9C19 5.13401 15.866 2 12 2ZM12 4C14.7614 4 17 6.23858 17 9V12H15V15H9V12H7V9C7 6.23858 9.23858 4 12 4ZM12 6C10.3431 6 9 7.34315 9 9V11H15V9C15 7.34315 13.6569 6 12 6ZM12 8C12.5523 8 13 8.44772 13 9C13 9.55228 12.5523 10 12 10C11.4477 10 11 9.55228 11 9C11 8.44772 11.4477 8 12 8Z"
+                    fill="currentColor"
+                  />
+                </svg>
+
+                <!-- Texte du Menu -->
+                <span class="menu-item-text">Authentication</span>
+
+                <!-- Flèche Dynamique -->
+                <svg
+                  class="menu-item-arrow absolute right-2.5 top-1/2 -translate-y-1/2 stroke-current"
+                  :class="[(selected === 'Authentication') ? 'menu-item-arrow-active' : 'menu-item-arrow-inactive']"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.79175 7.39584L10.0001 12.6042L15.2084 7.39585"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+
+              <!-- Dropdown Menu (Masqué par Défaut) -->
+              <div :class="(selected === 'Authentication') ? 'block' : 'hidden'">
+                <ul class="flex flex-col gap-1 mt-2 menu-dropdown pl-9">
+                  <li>
+                    <a href="signin.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign In
+                    </a>
+                  </li>
+                  <li>
+                    <a href="signup.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign Up
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul x-data="{ selected: '' }" class="flex flex-col gap-4 mb-6">
+            <!-- Menu Item Authentication -->
+            <li>
+              <a
+                href="#"
+                @click.prevent="selected = (selected === 'Authentication' ? '' : 'Authentication')"
+                class="menu-item group"
+                :class="(selected === 'Authentication') ? 'menu-item-active' : 'menu-item-inactive'"
+              >
+                <!-- Icône SVG (Clé) -->
+                <svg
+                  :class="(selected === 'Authentication') ? 'menu-item-icon-active' : 'menu-item-icon-inactive'"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2C8.13401 2 5 5.13401 5 9V12C5 12.5523 5.44772 13 6 13H7V15C7 16.1046 7.89543 17 9 17H15C16.1046 17 17 16.1046 17 15V13H18C18.5523 13 19 12.5523 19 12V9C19 5.13401 15.866 2 12 2ZM12 4C14.7614 4 17 6.23858 17 9V12H15V15H9V12H7V9C7 6.23858 9.23858 4 12 4ZM12 6C10.3431 6 9 7.34315 9 9V11H15V9C15 7.34315 13.6569 6 12 6ZM12 8C12.5523 8 13 8.44772 13 9C13 9.55228 12.5523 10 12 10C11.4477 10 11 9.55228 11 9C11 8.44772 11.4477 8 12 8Z"
+                    fill="currentColor"
+                  />
+                </svg>
+
+                <!-- Texte du Menu -->
+                <span class="menu-item-text">Authentication</span>
+
+                <!-- Flèche Dynamique -->
+                <svg
+                  class="menu-item-arrow absolute right-2.5 top-1/2 -translate-y-1/2 stroke-current"
+                  :class="[(selected === 'Authentication') ? 'menu-item-arrow-active' : 'menu-item-arrow-inactive']"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.79175 7.39584L10.0001 12.6042L15.2084 7.39585"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+
+              <!-- Dropdown Menu (Masqué par Défaut) -->
+              <div :class="(selected === 'Authentication') ? 'block' : 'hidden'">
+                <ul class="flex flex-col gap-1 mt-2 menu-dropdown pl-9">
+                  <li>
+                    <a href="signin.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign In
+                    </a>
+                  </li>
+                  <li>
+                    <a href="signup.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign Up
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul x-data="{ selected: '' }" class="flex flex-col gap-4 mb-6">
+            <!-- Menu Item Authentication -->
+            <li>
+              <a
+                href="#"
+                @click.prevent="selected = (selected === 'Authentication' ? '' : 'Authentication')"
+                class="menu-item group"
+                :class="(selected === 'Authentication') ? 'menu-item-active' : 'menu-item-inactive'"
+              >
+                <!-- Icône SVG (Clé) -->
+                <svg
+                  :class="(selected === 'Authentication') ? 'menu-item-icon-active' : 'menu-item-icon-inactive'"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2C8.13401 2 5 5.13401 5 9V12C5 12.5523 5.44772 13 6 13H7V15C7 16.1046 7.89543 17 9 17H15C16.1046 17 17 16.1046 17 15V13H18C18.5523 13 19 12.5523 19 12V9C19 5.13401 15.866 2 12 2ZM12 4C14.7614 4 17 6.23858 17 9V12H15V15H9V12H7V9C7 6.23858 9.23858 4 12 4ZM12 6C10.3431 6 9 7.34315 9 9V11H15V9C15 7.34315 13.6569 6 12 6ZM12 8C12.5523 8 13 8.44772 13 9C13 9.55228 12.5523 10 12 10C11.4477 10 11 9.55228 11 9C11 8.44772 11.4477 8 12 8Z"
+                    fill="currentColor"
+                  />
+                </svg>
+
+                <!-- Texte du Menu -->
+                <span class="menu-item-text">Authentication</span>
+
+                <!-- Flèche Dynamique -->
+                <svg
+                  class="menu-item-arrow absolute right-2.5 top-1/2 -translate-y-1/2 stroke-current"
+                  :class="[(selected === 'Authentication') ? 'menu-item-arrow-active' : 'menu-item-arrow-inactive']"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.79175 7.39584L10.0001 12.6042L15.2084 7.39585"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+
+              <!-- Dropdown Menu (Masqué par Défaut) -->
+              <div :class="(selected === 'Authentication') ? 'block' : 'hidden'">
+                <ul class="flex flex-col gap-1 mt-2 menu-dropdown pl-9">
+                  <li>
+                    <a href="signin.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign In
+                    </a>
+                  </li>
+                  <li>
+                    <a href="signup.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign Up
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul x-data="{ selected: '' }" class="flex flex-col gap-4 mb-6">
+            <!-- Menu Item Authentication -->
+            <li>
+              <a
+                href="#"
+                @click.prevent="selected = (selected === 'Authentication' ? '' : 'Authentication')"
+                class="menu-item group"
+                :class="(selected === 'Authentication') ? 'menu-item-active' : 'menu-item-inactive'"
+              >
+                <!-- Icône SVG (Clé) -->
+                <svg
+                  :class="(selected === 'Authentication') ? 'menu-item-icon-active' : 'menu-item-icon-inactive'"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2C8.13401 2 5 5.13401 5 9V12C5 12.5523 5.44772 13 6 13H7V15C7 16.1046 7.89543 17 9 17H15C16.1046 17 17 16.1046 17 15V13H18C18.5523 13 19 12.5523 19 12V9C19 5.13401 15.866 2 12 2ZM12 4C14.7614 4 17 6.23858 17 9V12H15V15H9V12H7V9C7 6.23858 9.23858 4 12 4ZM12 6C10.3431 6 9 7.34315 9 9V11H15V9C15 7.34315 13.6569 6 12 6ZM12 8C12.5523 8 13 8.44772 13 9C13 9.55228 12.5523 10 12 10C11.4477 10 11 9.55228 11 9C11 8.44772 11.4477 8 12 8Z"
+                    fill="currentColor"
+                  />
+                </svg>
+
+                <!-- Texte du Menu -->
+                <span class="menu-item-text">Authentication</span>
+
+                <!-- Flèche Dynamique -->
+                <svg
+                  class="menu-item-arrow absolute right-2.5 top-1/2 -translate-y-1/2 stroke-current"
+                  :class="[(selected === 'Authentication') ? 'menu-item-arrow-active' : 'menu-item-arrow-inactive']"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.79175 7.39584L10.0001 12.6042L15.2084 7.39585"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+
+              <!-- Dropdown Menu (Masqué par Défaut) -->
+              <div :class="(selected === 'Authentication') ? 'block' : 'hidden'">
+                <ul class="flex flex-col gap-1 mt-2 menu-dropdown pl-9">
+                  <li>
+                    <a href="signin.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign In
+                    </a>
+                  </li>
+                  <li>
+                    <a href="signup.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign Up
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul x-data="{ selected: '' }" class="flex flex-col gap-4 mb-6">
+            <!-- Menu Item Authentication -->
+            <li>
+              <a
+                href="#"
+                @click.prevent="selected = (selected === 'Authentication' ? '' : 'Authentication')"
+                class="menu-item group"
+                :class="(selected === 'Authentication') ? 'menu-item-active' : 'menu-item-inactive'"
+              >
+                <!-- Icône SVG (Clé) -->
+                <svg
+                  :class="(selected === 'Authentication') ? 'menu-item-icon-active' : 'menu-item-icon-inactive'"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2C8.13401 2 5 5.13401 5 9V12C5 12.5523 5.44772 13 6 13H7V15C7 16.1046 7.89543 17 9 17H15C16.1046 17 17 16.1046 17 15V13H18C18.5523 13 19 12.5523 19 12V9C19 5.13401 15.866 2 12 2ZM12 4C14.7614 4 17 6.23858 17 9V12H15V15H9V12H7V9C7 6.23858 9.23858 4 12 4ZM12 6C10.3431 6 9 7.34315 9 9V11H15V9C15 7.34315 13.6569 6 12 6ZM12 8C12.5523 8 13 8.44772 13 9C13 9.55228 12.5523 10 12 10C11.4477 10 11 9.55228 11 9C11 8.44772 11.4477 8 12 8Z"
+                    fill="currentColor"
+                  />
+                </svg>
+
+                <!-- Texte du Menu -->
+                <span class="menu-item-text">Authentication</span>
+
+                <!-- Flèche Dynamique -->
+                <svg
+                  class="menu-item-arrow absolute right-2.5 top-1/2 -translate-y-1/2 stroke-current"
+                  :class="[(selected === 'Authentication') ? 'menu-item-arrow-active' : 'menu-item-arrow-inactive']"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.79175 7.39584L10.0001 12.6042L15.2084 7.39585"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+
+              <!-- Dropdown Menu (Masqué par Défaut) -->
+              <div :class="(selected === 'Authentication') ? 'block' : 'hidden'">
+                <ul class="flex flex-col gap-1 mt-2 menu-dropdown pl-9">
+                  <li>
+                    <a href="signin.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign In
+                    </a>
+                  </li>
+                  <li>
+                    <a href="signup.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign Up
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul x-data="{ selected: '' }" class="flex flex-col gap-4 mb-6">
+            <!-- Menu Item Authentication -->
+            <li>
+              <a
+                href="#"
+                @click.prevent="selected = (selected === 'Authentication' ? '' : 'Authentication')"
+                class="menu-item group"
+                :class="(selected === 'Authentication') ? 'menu-item-active' : 'menu-item-inactive'"
+              >
+                <!-- Icône SVG (Clé) -->
+                <svg
+                  :class="(selected === 'Authentication') ? 'menu-item-icon-active' : 'menu-item-icon-inactive'"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2C8.13401 2 5 5.13401 5 9V12C5 12.5523 5.44772 13 6 13H7V15C7 16.1046 7.89543 17 9 17H15C16.1046 17 17 16.1046 17 15V13H18C18.5523 13 19 12.5523 19 12V9C19 5.13401 15.866 2 12 2ZM12 4C14.7614 4 17 6.23858 17 9V12H15V15H9V12H7V9C7 6.23858 9.23858 4 12 4ZM12 6C10.3431 6 9 7.34315 9 9V11H15V9C15 7.34315 13.6569 6 12 6ZM12 8C12.5523 8 13 8.44772 13 9C13 9.55228 12.5523 10 12 10C11.4477 10 11 9.55228 11 9C11 8.44772 11.4477 8 12 8Z"
+                    fill="currentColor"
+                  />
+                </svg>
+
+                <!-- Texte du Menu -->
+                <span class="menu-item-text">Authentication</span>
+
+                <!-- Flèche Dynamique -->
+                <svg
+                  class="menu-item-arrow absolute right-2.5 top-1/2 -translate-y-1/2 stroke-current"
+                  :class="[(selected === 'Authentication') ? 'menu-item-arrow-active' : 'menu-item-arrow-inactive']"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.79175 7.39584L10.0001 12.6042L15.2084 7.39585"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+
+              <!-- Dropdown Menu (Masqué par Défaut) -->
+              <div :class="(selected === 'Authentication') ? 'block' : 'hidden'">
+                <ul class="flex flex-col gap-1 mt-2 menu-dropdown pl-9">
+                  <li>
+                    <a href="signin.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign In
+                    </a>
+                  </li>
+                  <li>
+                    <a href="signup.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign Up
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul x-data="{ selected: '' }" class="flex flex-col gap-4 mb-6">
+            <!-- Menu Item Authentication -->
+            <li>
+              <a
+                href="#"
+                @click.prevent="selected = (selected === 'Authentication' ? '' : 'Authentication')"
+                class="menu-item group"
+                :class="(selected === 'Authentication') ? 'menu-item-active' : 'menu-item-inactive'"
+              >
+                <!-- Icône SVG (Clé) -->
+                <svg
+                  :class="(selected === 'Authentication') ? 'menu-item-icon-active' : 'menu-item-icon-inactive'"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2C8.13401 2 5 5.13401 5 9V12C5 12.5523 5.44772 13 6 13H7V15C7 16.1046 7.89543 17 9 17H15C16.1046 17 17 16.1046 17 15V13H18C18.5523 13 19 12.5523 19 12V9C19 5.13401 15.866 2 12 2ZM12 4C14.7614 4 17 6.23858 17 9V12H15V15H9V12H7V9C7 6.23858 9.23858 4 12 4ZM12 6C10.3431 6 9 7.34315 9 9V11H15V9C15 7.34315 13.6569 6 12 6ZM12 8C12.5523 8 13 8.44772 13 9C13 9.55228 12.5523 10 12 10C11.4477 10 11 9.55228 11 9C11 8.44772 11.4477 8 12 8Z"
+                    fill="currentColor"
+                  />
+                </svg>
+
+                <!-- Texte du Menu -->
+                <span class="menu-item-text">Authentication</span>
+
+                <!-- Flèche Dynamique -->
+                <svg
+                  class="menu-item-arrow absolute right-2.5 top-1/2 -translate-y-1/2 stroke-current"
+                  :class="[(selected === 'Authentication') ? 'menu-item-arrow-active' : 'menu-item-arrow-inactive']"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.79175 7.39584L10.0001 12.6042L15.2084 7.39585"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+
+              <!-- Dropdown Menu (Masqué par Défaut) -->
+              <div :class="(selected === 'Authentication') ? 'block' : 'hidden'">
+                <ul class="flex flex-col gap-1 mt-2 menu-dropdown pl-9">
+                  <li>
+                    <a href="signin.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign In
+                    </a>
+                  </li>
+                  <li>
+                    <a href="signup.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign Up
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul x-data="{ selected: '' }" class="flex flex-col gap-4 mb-6">
+            <!-- Menu Item Authentication -->
+            <li>
+              <a
+                href="#"
+                @click.prevent="selected = (selected === 'Authentication' ? '' : 'Authentication')"
+                class="menu-item group"
+                :class="(selected === 'Authentication') ? 'menu-item-active' : 'menu-item-inactive'"
+              >
+                <!-- Icône SVG (Clé) -->
+                <svg
+                  :class="(selected === 'Authentication') ? 'menu-item-icon-active' : 'menu-item-icon-inactive'"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2C8.13401 2 5 5.13401 5 9V12C5 12.5523 5.44772 13 6 13H7V15C7 16.1046 7.89543 17 9 17H15C16.1046 17 17 16.1046 17 15V13H18C18.5523 13 19 12.5523 19 12V9C19 5.13401 15.866 2 12 2ZM12 4C14.7614 4 17 6.23858 17 9V12H15V15H9V12H7V9C7 6.23858 9.23858 4 12 4ZM12 6C10.3431 6 9 7.34315 9 9V11H15V9C15 7.34315 13.6569 6 12 6ZM12 8C12.5523 8 13 8.44772 13 9C13 9.55228 12.5523 10 12 10C11.4477 10 11 9.55228 11 9C11 8.44772 11.4477 8 12 8Z"
+                    fill="currentColor"
+                  />
+                </svg>
+
+                <!-- Texte du Menu -->
+                <span class="menu-item-text">Authentication</span>
+
+                <!-- Flèche Dynamique -->
+                <svg
+                  class="menu-item-arrow absolute right-2.5 top-1/2 -translate-y-1/2 stroke-current"
+                  :class="[(selected === 'Authentication') ? 'menu-item-arrow-active' : 'menu-item-arrow-inactive']"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.79175 7.39584L10.0001 12.6042L15.2084 7.39585"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+
+              <!-- Dropdown Menu (Masqué par Défaut) -->
+              <div :class="(selected === 'Authentication') ? 'block' : 'hidden'">
+                <ul class="flex flex-col gap-1 mt-2 menu-dropdown pl-9">
+                  <li>
+                    <a href="signin.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign In
+                    </a>
+                  </li>
+                  <li>
+                    <a href="signup.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign Up
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul x-data="{ selected: '' }" class="flex flex-col gap-4 mb-6">
+            <!-- Menu Item Authentication -->
+            <li>
+              <a
+                href="#"
+                @click.prevent="selected = (selected === 'Authentication' ? '' : 'Authentication')"
+                class="menu-item group"
+                :class="(selected === 'Authentication') ? 'menu-item-active' : 'menu-item-inactive'"
+              >
+                <!-- Icône SVG (Clé) -->
+                <svg
+                  :class="(selected === 'Authentication') ? 'menu-item-icon-active' : 'menu-item-icon-inactive'"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2C8.13401 2 5 5.13401 5 9V12C5 12.5523 5.44772 13 6 13H7V15C7 16.1046 7.89543 17 9 17H15C16.1046 17 17 16.1046 17 15V13H18C18.5523 13 19 12.5523 19 12V9C19 5.13401 15.866 2 12 2ZM12 4C14.7614 4 17 6.23858 17 9V12H15V15H9V12H7V9C7 6.23858 9.23858 4 12 4ZM12 6C10.3431 6 9 7.34315 9 9V11H15V9C15 7.34315 13.6569 6 12 6ZM12 8C12.5523 8 13 8.44772 13 9C13 9.55228 12.5523 10 12 10C11.4477 10 11 9.55228 11 9C11 8.44772 11.4477 8 12 8Z"
+                    fill="currentColor"
+                  />
+                </svg>
+
+                <!-- Texte du Menu -->
+                <span class="menu-item-text">Authentication</span>
+
+                <!-- Flèche Dynamique -->
+                <svg
+                  class="menu-item-arrow absolute right-2.5 top-1/2 -translate-y-1/2 stroke-current"
+                  :class="[(selected === 'Authentication') ? 'menu-item-arrow-active' : 'menu-item-arrow-inactive']"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.79175 7.39584L10.0001 12.6042L15.2084 7.39585"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+
+              <!-- Dropdown Menu (Masqué par Défaut) -->
+              <div :class="(selected === 'Authentication') ? 'block' : 'hidden'">
+                <ul class="flex flex-col gap-1 mt-2 menu-dropdown pl-9">
+                  <li>
+                    <a href="signin.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign In
+                    </a>
+                  </li>
+                  <li>
+                    <a href="signup.html" 
+                       class="menu-dropdown-item group"
+                       :class="(selected === 'Authentication') ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'">
+                      Sign Up
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
           <ul x-data="{ selected: '' }" class="flex flex-col gap-4 mb-6">
             <!-- Menu Item Authentication -->
             <li>
