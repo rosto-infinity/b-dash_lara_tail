@@ -31,7 +31,7 @@
     :class="{'dark bg-gray-900': darkMode === true}"
   >
     <!-- ===== Preloader Start ===== -->
-      {{-- @include('pages.partials.preloader') --}}
+      @include('layouts.admin.partials.preloader')
 
     <!-- ===== Preloader End ===== -->
 
